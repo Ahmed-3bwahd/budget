@@ -1,0 +1,38 @@
+@import "../../../assets/mainStyle.scss";
+
+.itms{
+  padding: 10px 0;
+  padding-left: 5px;
+  margin: 10px 7px;
+  background-color: $light-grey;
+  border-radius: 3px;
+  &:hover{
+    background-color: darken($light-grey, 3%);
+    button{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  span{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .amount{padding: 10px}
+  button{
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity .2s ease-out, transform .2s ease-out;
+    transform: scale(0);
+  }
+}
+
+.incomes{
+  span{ color: $green }
+  .amount{background-color: $light-green}
+}
+
+.expenses{
+  span{ color: $red }
+  .amount{background-color: $light-red}
+}

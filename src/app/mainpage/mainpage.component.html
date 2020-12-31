@@ -1,0 +1,15 @@
+<div class="top-bar">
+  <h1>budget calculator</h1>
+</div>
+
+<div class="total-budget">
+  <h1 [ngClass]="{'green': totalbudget > 0, 'red': totalbudget < 0}">{{ totalbudget }}</h1>
+</div>
+
+<div class="add-items">
+  <app-additems 
+    (itemSubmitted)="onAddItem($event)" 
+    [allItems]="allItems"
+    (delitem)="finaldelete($event)"></app-additems>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="itms">
+  <div class="row" [ngClass]="{'incomes': item.amount >=0, 'expenses': item.amount <0}">
+    <div class="col-8">
+      <span>{{item.description}}</span>
+    </div>
+    <div class="col-2">
+      <span class="amount text-center">{{item.amount}}</span>
+    </div>
+    <div class="col-1">
+      <button class="btn btn-danger" (click)="delitem1()">X</button>
+    </div>
+  </div>
+</div>
